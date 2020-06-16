@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+@each $name, $color in $colors {     
+	.#{$name}-bg {
+      background-color: $color;
+    }  
+    .#{$name}-txt {
+      color: $color;
+    } 
+}
+
+
+.center-vertically{
+	display: flex;
+	align-items: center;
+}
+
+.center-horizontally{
+	display: flex;
+	justify-content: center;
+}
+
+.center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// @extend .center-vertically;
+// @extend .center-horizontally;
+// @extend .center;

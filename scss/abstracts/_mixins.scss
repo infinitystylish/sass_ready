@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// @include c-button(
+//   'set-adapt', // set / set-adapt / no-set
+//   black, // background-color
+//   white, // color
+//   20px,  // padding
+//   200px, //width (Obligatory set / set-adapt)
+//   null, // height (Obligatory set / set-adapt)
+//   30px  // border-radius (Optional)
+// );
+
+@mixin c-button(
+  $adaptable,
+  $background-color,
+  $color,
+  $padding,
+  $width: null,
+  $height: null,
+  $border-radius: null
+){
+  background-color: $background-color;
+  color: $color;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: $padding;
+  border-radius: $border-radius;
+  border: none;
+  @if ( $adaptable == 'set'){
+    width: $width;
+    height: $height;
+  }
+  @if ( $adaptable == 'set-adapt'){
+    max-width: $width;
+    min-height: $height;
+    width: 100%;
+  }
+}
