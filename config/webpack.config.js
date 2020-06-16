@@ -3,6 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
+  mode: 'none',
   entry: {
     main: path.resolve(__dirname, "../src/js/index.js")
   },
